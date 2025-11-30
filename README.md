@@ -18,7 +18,7 @@ This repo is a simple implementation of the fastest algorithm (I found) to compu
 ### 1 - Installation
 Since it uses the `rug` crate, you need to have a Linux system or WSL with GMP installed. 
 
-You can download the latest release from the [releases page](https://github.com/Pietot/rust-figonacci/releases/latest) and run it.
+You can download the latest release from the [releases page](https://github.com/Pietot/rust-fibonacci/releases/latest) and run it.
 
 Or you can download the source code / clone the repo and build it:
 
