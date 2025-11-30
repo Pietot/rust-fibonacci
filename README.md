@@ -9,8 +9,10 @@ This repo is a simple implementation of the fastest algorithm (I found) to compu
 ## 📋 Summary
 
 ### 1. [Installation](#1---installation)
+
+### 2. [Performance](#2---performance)
     
-### 2. [Credits](#2---credits)
+### 3. [Credits](#3---credits)
 
 
 ### 1 - Installation
@@ -24,6 +26,10 @@ Or you can download the source code / clone the repo and build it:
 cargo build --release
 ```
 
-## 2 - Credits
+### 2 - Performance
+
+On my machine (Ryzen 5 3600, 16GB RAM), the program computes on average the 144,000,000th Fibonacci number under a second with a search time of around 32 seconds.
+
+## 3 - Credits
 
 - **[Algorithm explained](https://www.youtube.com/watch?v=6ZyTqfFCnjg)** by Pihedron.
