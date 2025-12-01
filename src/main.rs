@@ -6,13 +6,6 @@ fn fib_luc(n: &Integer) -> (Integer, Integer) {
         return (Integer::from(0), Integer::from(2));
     }
 
-    if *n < 0 {
-        let neg_n = Integer::from(-n);
-        let k = Integer::from(((&neg_n & Integer::from(1)) << 1) - Integer::from(1));
-        let (fib, luc) = fib_luc(&neg_n);
-        return (Integer::from(&fib * &k), Integer::from(luc * k));
-    }
-
     if (n & Integer::from(1)) == 1 {
         let n_minus_one = Integer::from(n - Integer::from(1));
         let (fib, luc) = fib_luc(&n_minus_one);
@@ -26,10 +19,10 @@ fn fib_luc(n: &Integer) -> (Integer, Integer) {
     let (fib, luc) = fib_luc(&n_half);
     let luc_squared = Integer::from(luc.square_ref());
     let adjustment = Integer::from(((n & Integer::from(2)) << 1) - Integer::from(2));
-    (
+    return (
         (&fib * &luc).complete(),
         Integer::from(luc_squared + adjustment),
-    )
+    );
 }
 
 fn main() -> anyhow::Result<()> {
